@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smile - Postres y Snacks</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Estilos personalizados -->
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f8f9fa;
+    }
+    .hero {
+      background-image: url('https://via.placeholder.com/1920x600/FF6347/FFFFFF?text=Bienvenidos+Smile');
+      background-size: cover;
+      background-position: center;
+      color: white;
+      padding: 100px 0;
+    }
+    .card-body img {
+      border-radius: 15px;
+      transition: transform 0.3s ease;
+    }
+    .card-body img:hover {
+      transform: scale(1.1);
+    }
+    .testimonials {
+      background-color: #ffe6e6;
+      padding: 60px 0;
+    }
+    .footer {
+      background-color: #333;
+      color: white;
+      padding: 20px 0;
+      text-align: center;
+    }
+    .footer a {
+      color: white;
+      text-decoration: none;
+    }
+    .footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Barra de navegación -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Smile</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link active" href="#">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#productos">Productos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#testimonios">Testimonios</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contacto">Contacto</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Sección de Bienvenida -->
+  <header class="hero text-center">
+    <div class="container">
+      <h1 class="display-4">¡Disfruta de los mejores postres y snacks!</h1>
+      <p class="lead">Endulza tu día con nuestras deliciosas opciones.</p>
+      <a href="#productos" class="btn btn-danger btn-lg">Ver Menú</a>
+    </div>
+  </header>
+
+  <!-- Galería de productos -->
+  <section id="productos" class="container py-5">
+    <h2 class="text-center mb-4">Nuestros Productos</h2>
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+      <div class="col">
+        <div class="card shadow">
+          <img src="https://via.placeholder.com/400x300/FF6347/FFFFFF?text=Postre+1" class="card-img-top" alt="Postre 1">
+          <div class="card-body text-center">
+            <h5 class="card-title">Tarta de Fresas</h5>
+            <p class="card-text">Deliciosa tarta con fresas frescas y crema pastelera.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card shadow">
+          <img src="https://via.placeholder.com/400x300/FF6347/FFFFFF?text=Postre+2" class="card-img-top" alt="Postre 2">
+          <div class="card-body text-center">
+            <h5 class="card-title">Galletas de Chocolate</h5>
+            <p class="card-text">Galletas caseras con chips de chocolate y un toque de vainilla.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card shadow">
+          <img src="https://via.placeholder.com/400x300/FF6347/FFFFFF?text=Postre+3" class="card-img-top" alt="Postre 3">
+          <div class="card-body text-center">
+            <h5 class="card-title">Brownie de Chocolate</h5>
+            <p class="card-text">Un brownie esponjoso, rico y perfecto para los amantes del chocolate.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonios -->
+  <section id="testimonios" class="testimonials text-center">
+    <div class="container">
+      <h2 class="mb-5">Lo que dicen nuestros clientes</h2>
+      <div class="row">
+        <div class="col-md-4">
+          <blockquote class="blockquote">
+            <p class="mb-0">"¡Los postres más deliciosos que he probado! Perfectos para cualquier ocasión."</p>
+            <footer class="blockquote-footer">Ana García, <cite title="Source Title">Cliente Feliz</cite></footer>
+          </blockquote>
+        </div>
+        <div class="col-md-4">
+          <blockquote class="blockquote">
+            <p class="mb-0">"Siempre confío en Smile para mis eventos. ¡Nunca decepcionan!"</p>
+            <footer class="blockquote-footer">Carlos López, <cite title="Source Title">Organizador de Eventos</cite></footer>
+          </blockquote>
+        </div>
+        <div class="col-md-4">
+          <blockquote class="blockquote">
+            <p class="mb-0">"Mi lugar favorito para encontrar postres caseros y frescos. ¡Totalmente recomendados!"</p>
+            <footer class="blockquote-footer">Luisa Martínez, <cite title="Source Title">Cliente Regular</cite></footer>
+          </blockquote>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Formulario de Contacto -->
+  <section id="contacto" class="container py-5">
+    <h2 class="text-center mb-4">Contáctanos</h2>
+    <form>
+      <div class="row">
+        <div class="col-md-6 mb-3">
+          <input type="text" class="form-control" id="nombre" placeholder="Tu Nombre" required>
+        </div>
+        <div class="col-md-6 mb-3">
+          <input type="email" class="form-control" id="email" placeholder="Tu Correo Electrónico" required>
+        </div>
+        <div class="col-12 mb-3">
+          <textarea class="form-control" id="mensaje" rows="4" placeholder="Tu Mensaje" required></textarea>
+        </div>
+        <div class="col-12">
+          <button type="submit" class="btn btn-danger btn-lg w-100">Enviar Mensaje</button>
+        </div>
+      </div>
+    </form>
+  </section>
+
+  <!-- Pie de página -->
+  <footer class="footer">
+    <p>&copy; 2024 Smile - Todos los derechos reservados</p>
+    <p><a href="mailto:contacto@smile.com">contacto@smile.com</a></p>
+  </footer>
+
+  <!-- Bootstrap JS y dependencias -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+</body>
+</html>
