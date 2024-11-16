@@ -1,177 +1,302 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Smile - Postres y Snacks</title>
+
+  <title>Smile</title>
+  <link rel="shortcut icon" href="./img/smile.ico" type="image/x-icon">
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-  <!-- Estilos personalizados -->
-  <style>
-    body {
-      font-family: 'Arial', sans-serif;
-      background-color: #f8f9fa;
-    }
-    .hero {
-      background-image: url('https://via.placeholder.com/1920x600/FF6347/FFFFFF?text=Bienvenidos+Smile');
-      background-size: cover;
-      background-position: center;
-      color: white;
-      padding: 100px 0;
-    }
-    .card-body img {
-      border-radius: 15px;
-      transition: transform 0.3s ease;
-    }
-    .card-body img:hover {
-      transform: scale(1.1);
-    }
-    .testimonials {
-      background-color: #ffe6e6;
-      padding: 60px 0;
-    }
-    .footer {
-      background-color: #333;
-      color: white;
-      padding: 20px 0;
-      text-align: center;
-    }
-    .footer a {
-      color: white;
-      text-decoration: none;
-    }
-    .footer a:hover {
-      text-decoration: underline;
-    }
-  </style>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/estilos.css">
 </head>
-<body>
 
+<body>
   <!-- Barra de navegación -->
-  <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
+  <nav class="navbar navbar-expand-lg fixed-top">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">Smile</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <a class="navbar-brand d-flex align-items-center" href="#">
+        <img src="./img/logoSmile.png" alt="Logo Smile" class="logo me-2" style="height: 40px;">
+        Smile
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
+          <!-- Inicio -->
           <li class="nav-item">
-            <a class="nav-link active" href="#">Inicio</a>
+            <a class="nav-link active" href="#inicio">
+              <i class="bi bi-house-door me-2"></i>Inicio
+            </a>
           </li>
+          <!-- Nosotros -->
           <li class="nav-item">
-            <a class="nav-link" href="#productos">Productos</a>
+            <a class="nav-link active" href="#conocenos">
+              <i class="bi bi-people me-2"></i>Nosotros
+            </a>
           </li>
+          <!-- Productos -->
           <li class="nav-item">
-            <a class="nav-link" href="#testimonios">Testimonios</a>
+            <a class="nav-link active" href="#productos">
+              <i class="bi bi-basket me-2"></i>Productos
+            </a>
           </li>
+          <!-- Contacto -->
           <li class="nav-item">
-            <a class="nav-link" href="#contacto">Contacto</a>
+            <a class="nav-link active" href="#contacto">
+              <i class="bi bi-envelope me-2"></i>Contacto
+            </a>
           </li>
         </ul>
       </div>
+
     </div>
   </nav>
 
   <!-- Sección de Bienvenida -->
-  <header class="hero text-center">
-    <div class="container">
-      <h1 class="display-4">¡Disfruta de los mejores postres y snacks!</h1>
-      <p class="lead">Endulza tu día con nuestras deliciosas opciones.</p>
-      <a href="#productos" class="btn btn-danger btn-lg">Ver Menú</a>
+  <header class="hero text-center position-relative" id="inicio">
+    <div class="container position-relative bienvenida">
+      <h1>Smile</h1>
+      <p class="lead">¡La dulzura de la salud!</p>
+      <a href="#productos" class="btn btn-danger btn-lg">Productos</a>
     </div>
   </header>
 
-  <!-- Galería de productos -->
-  <section id="productos" class="container py-5">
-    <h2 class="text-center mb-4">Nuestros Productos</h2>
-    <div class="row row-cols-1 row-cols-md-3 g-4">
-      <div class="col">
-        <div class="card shadow">
-          <img src="https://via.placeholder.com/400x300/FF6347/FFFFFF?text=Postre+1" class="card-img-top" alt="Postre 1">
-          <div class="card-body text-center">
-            <h5 class="card-title">Tarta de Fresas</h5>
-            <p class="card-text">Deliciosa tarta con fresas frescas y crema pastelera.</p>
-          </div>
-        </div>
-      </div>
-      <div class="col">
-        <div class="card shadow">
-          <img src="https://via.placeholder.com/400x300/FF6347/FFFFFF?text=Postre+2" class="card-img-top" alt="Postre 2">
-          <div class="card-body text-center">
-            <h5 class="card-title">Galletas de Chocolate</h5>
-            <p class="card-text">Galletas caseras con chips de chocolate y un toque de vainilla.</p>
-          </div>
-        </div>
-      </div>
-      <div class="col">
-        <div class="card shadow">
-          <img src="https://via.placeholder.com/400x300/FF6347/FFFFFF?text=Postre+3" class="card-img-top" alt="Postre 3">
-          <div class="card-body text-center">
-            <h5 class="card-title">Brownie de Chocolate</h5>
-            <p class="card-text">Un brownie esponjoso, rico y perfecto para los amantes del chocolate.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Testimonios -->
-  <section id="testimonios" class="testimonials text-center">
+  <!-- Sección "Conócenos" -->
+  <hr id="conocenos" class="mt-5">
+  <section class="text-center mt-2 py-5">
     <div class="container">
-      <h2 class="mb-5">Lo que dicen nuestros clientes</h2>
-      <div class="row">
-        <div class="col-md-4">
-          <blockquote class="blockquote">
-            <p class="mb-0">"¡Los postres más deliciosos que he probado! Perfectos para cualquier ocasión."</p>
-            <footer class="blockquote-footer">Ana García, <cite title="Source Title">Cliente Feliz</cite></footer>
-          </blockquote>
+      <h2 class="mb-2">Conócenos</h2>
+      <div class="row align-items-center">
+        <!-- Misión -->
+        <div class="col-md-6 mb-4">
+          <h3>Misión</h3>
+          <p class="text-justify">
+            Nuestra misión es brindar alimentos saludables que nutran al cuerpo, mientras contribuimos a un futuro
+            más sustentable y apoyando a nuestra sociedad.
+          </p>
         </div>
-        <div class="col-md-4">
-          <blockquote class="blockquote">
-            <p class="mb-0">"Siempre confío en Smile para mis eventos. ¡Nunca decepcionan!"</p>
-            <footer class="blockquote-footer">Carlos López, <cite title="Source Title">Organizador de Eventos</cite></footer>
-          </blockquote>
+        <!-- Segmento de mercado -->
+        <div class="col-md-6 mb-4">
+          <h3>Segmento de mercado</h3>
+          <p class="text-justify">
+            Nuestros productos van a estar dirigidos a los estudiantes, docentes y trabajadores de la preparatoria
+            BUAP Tlacotepec de Benito Juárez. Cumpliendo con nuestro propósito de brindar postres saludables y dar
+            un ejemplo de una alimentación más rica pero al mismo tiempo sana.
+          </p>
         </div>
-        <div class="col-md-4">
-          <blockquote class="blockquote">
-            <p class="mb-0">"Mi lugar favorito para encontrar postres caseros y frescos. ¡Totalmente recomendados!"</p>
-            <footer class="blockquote-footer">Luisa Martínez, <cite title="Source Title">Cliente Regular</cite></footer>
-          </blockquote>
+        <!-- Visión -->
+        <div class="col-md-6 mb-3">
+          <h3>Visión</h3>
+          <p class="text-justify">
+            Ser una marca reconocida por nuestra innovación y compromiso social, mientras generamos un impacto
+            positivo en la salud de las personas, el medio ambiente y la economía local, inspirando a una
+            generación más saludable y consciente.
+          </p>
+          <img src="./img/logoSmile.png" alt="Logo de Smile" class="img-fluid mb-3" style="max-width: 150px;">
+        </div>
+        <!-- Propuesta de valor -->
+        <div class="col-md-6 mb-3">
+          <h3>Propuesta de valor</h3>
+          <p class="text-justify">
+            Variedad de postres y snacks. Utilizando ingredientes como fruta fresca y productos de buena calidad
+            para la elaboración de estos. Comprometidos con la higiene para la creación de distintos postres.
+          </p>
+          <img src="./img/logoBUAP.png" alt="Logo de BUAP" class="img-fluid mb-3 " style="max-width: 150px;">
+        </div>
+      </div>
+    </div>
+  </section>
+  <hr class="my-4" id="productos">
+  <!-- Galería de productos -->
+  <section class="container py-5">
+    <h2 class="text-center mb-4">Nuestros Productos</h2>
+    <!-- Filtro de búsqueda -->
+    <div class="mb-4 text-center">
+      <label for="search" class="mb-2">Encuentra el snack perfecto</label>
+      <input type="text" class="form-control w-50 mx-auto" id="search" placeholder="Buscar productos...">
+    </div>
+    <!-- Contenedor donde se mostrará el producto encontrado -->
+    <div id="search-result" class="text-center mt-4">
+      <!-- Este div se llenará dinámicamente con los resultados -->
+    </div>
+    <div class="row row-cols-1 row-cols-md-3 g-4" id="product-list">
+      <div class="col">
+        <div class="card">
+          <img src="./img/brochetas.jpeg" class="card-img-top" alt="Postre 1">
+          <div class="card-body text-center">
+            <h5 class="card-title">Brochetas</h5>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <img src="./img/ensalda.jpeg" class="card-img-top" alt="Postre 2">
+          <div class="card-body text-center">
+            <h5 class="card-title">Ensalada</h5>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <img src="./img/gelatina.jpeg" class="card-img-top" alt="Postre 3">
+          <div class="card-body text-center">
+            <h5 class="card-title">Gelatina</h5>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <img src="./img/chocobanas.jpeg" class="card-img-top" alt="Postre 2">
+          <div class="card-body text-center">
+            <h5 class="card-title">Chocobananas con avena</h5>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <img src="./img/barrasGranola.jpeg" class="card-img-top" alt="Postre 3">
+          <div class="card-body text-center">
+            <h5 class="card-title">Barras con granola</h5>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <img src="./img/partfait.png" class="card-img-top" alt="Postre 2">
+          <div class="card-body text-center">
+            <h5 class="card-title">Parfait</h5>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <img src="./img/fresasCrema.jpeg" class="card-img-top" alt="Postre 3">
+          <div class="card-body text-center">
+            <h5 class="card-title">Fresas con crema</h5>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <img src="./img/manzanasCaramelo.jpeg" class="card-img-top" alt="Postre 2">
+          <div class="card-body text-center">
+            <h5 class="card-title">Manzanas con caramelo</h5>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <img src="./img/ensaladaFruta.jpeg" class="card-img-top" alt="Postre 3">
+          <div class="card-body text-center">
+            <h5 class="card-title">Ensalada de fruta</h5>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <img src="./img/jicaletas.jpeg" class="card-img-top" alt="Postre 3">
+          <div class="card-body text-center">
+            <h5 class="card-title">Jicaletas</h5>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <img src="./img/wafles.jpeg" class="card-img-top" alt="Postre 3">
+          <div class="card-body text-center">
+            <h5 class="card-title">Wafles</h5>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Formulario de Contacto -->
   <section id="contacto" class="container py-5">
-    <h2 class="text-center mb-4">Contáctanos</h2>
-    <form>
-      <div class="row">
-        <div class="col-md-6 mb-3">
-          <input type="text" class="form-control" id="nombre" placeholder="Tu Nombre" required>
+    <h2 class="text-end mb-3">Contáctanos</h2>
+    <div class="d-flex justify-content-end gap-5 flex-wrap">
+      <!-- flex-wrap para que se ajusten los elementos en pantallas pequeñas -->
+      <!-- Punto de venta -->
+      <a href="https://maps.app.goo.gl/ADs6LAyDE45HdbaK6" target="_blank" class="text-decoration-none text-dark">
+        <div class="text-center">
+          <i class="bi bi-geo-alt-fill fa-2x mb-2 text-primary fs-2"></i>
+          <h5 class="mb-2 d-none d-md-block">Punto de Venta</h5> <!-- Ocultar en pantallas pequeñas -->
+          <p class="d-none d-md-block">Preparatoria BUAP Tlacotepec de Benito Juárez</p>
+          <!-- Ocultar en pantallas pequeñas -->
         </div>
-        <div class="col-md-6 mb-3">
-          <input type="email" class="form-control" id="email" placeholder="Tu Correo Electrónico" required>
+      </a>
+      <!-- Instagram -->
+      <a href="https://www.instagram.com/smile_postres.snacks/" target="_blank" class="text-decoration-none text-dark">
+        <div class="text-center">
+          <i class="bi bi-instagram fa-2x mb-2 text-danger fs-2"></i>
+          <h5 class="mb-2 d-none d-md-block">Síguenos en Instagram</h5> <!-- Ocultar en pantallas pequeñas -->
+          <p class="d-none d-md-block">@smile_postres.snacks</p> <!-- Ocultar en pantallas pequeñas -->
         </div>
-        <div class="col-12 mb-3">
-          <textarea class="form-control" id="mensaje" rows="4" placeholder="Tu Mensaje" required></textarea>
+      </a>
+      <!-- Pedidos -->
+      <a href="tel:+52371084442" class="text-decoration-none text-dark">
+        <div class="text-center">
+          <i class="bi bi-telephone-fill fa-2x mb-2 text-success fs-2"></i>
+          <h5 class="mb-2 d-none d-md-block">Pedidos</h5> <!-- Ocultar en pantallas pequeñas -->
+          <p class="d-none d-md-block">237 108 4442</p> <!-- Ocultar en pantallas pequeñas -->
         </div>
-        <div class="col-12">
-          <button type="submit" class="btn btn-danger btn-lg w-100">Enviar Mensaje</button>
-        </div>
-      </div>
-    </form>
+      </a>
+    </div>
   </section>
 
-  <!-- Pie de página -->
-  <footer class="footer">
-    <p>&copy; 2024 Smile - Todos los derechos reservados</p>
-    <p><a href="mailto:contacto@smile.com">contacto@smile.com</a></p>
+
+  <footer class="footer bg-dark text-white py-4">
+    <div class="container">
+      <div class="d-flex flex-column flex-md-row justify-content-between align-items-center">
+        <!-- Colaboradores (izquierda) visible solo en pantallas grandes -->
+        <div class="col-4 col-md-4 d-none d-md-block">
+          <ul class="list-unstyled mb-0 text-start">
+            <li><a href="https://www.instagram.com/less_careraaa/" target="_blank" class="text-white me-2"><i
+                  class="bi bi-instagram"></i></a> Lesly Martínez Carrera</li>
+            <li><a href="https://www.instagram.com/" target="_blank" class="text-white me-2"><i
+                  class="bi bi-instagram"></i></a> Zury Victoria Doroteo Flores</li>
+            <li><a href="https://www.instagram.com/gonz.c.l/" target="_blank" class="text-white me-2"><i
+                  class="bi bi-instagram"></i></a> Gonzalo Contreras Laureano</li>
+            <li><a href="https://www.instagram.com/@abrahim0/" target="_blank" class="text-white me-2"><i
+                  class="bi bi-instagram"></i></a> Abraham Hernández Rodríguez</li>
+            <li><a href="https://www.instagram.com/" target="_blank" class="text-white me-2"><i
+                  class="bi bi-instagram"></i></a> Alyn Dayami Pulido Ortíz</li>
+          </ul>
+        </div>
+        <!-- Texto central visible solo en pantallas pequeñas -->
+        <div class="col-10 text-center d-md-none">
+          <p class="mb-0">&copy; 2024 <strong>Smile</strong> - Todos los derechos reservados</p>
+          <img src="./img/logoSmile.png" alt="Logo Smile" class="img-fluid" style="width: 50px;">
+        </div>
+
+        <!-- Texto central visible solo en pantallas grandes -->
+        <div class="col-4 text-center d-none d-md-block">
+          <p class="mb-0">&copy; 2024 <strong>Smile</strong> - Todos los derechos reservados</p>
+        </div>
+
+        <!-- Iconos (derecha) visible solo en pantallas grandes -->
+        <div class="col-4 text-end d-none d-md-block">
+          <a href="#" class="text-white me-3">
+            <img src="./img/logoSmile.png" alt="Logo Smile" class="img-fluid" style="width: 80px;">
+          </a>
+          <a href="#" class="text-white">
+            <img src="./img/Escudo_BUAP_Negativo.png" alt="Logo BUAP" class="img-fluid" style="width: 80px;">
+          </a>
+        </div>
+      </div>
+    </div>
   </footer>
+
 
   <!-- Bootstrap JS y dependencias -->
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+  <script src="./js/index.js"></script>
 </body>
+
 </html>
